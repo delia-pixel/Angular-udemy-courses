@@ -1,0 +1,30 @@
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<br>
+Server Name:
+<input type="text" class="form-control" [(ngModel)]="serverName" (input)="onUpdateServerName($event)">
+<br>
+<button class="btn btn-primary" (click)="onCreateServer()" [disabled]="!allowNewServer"> Add new server</button>
+
+<p>{{servercreationStatus}}</p>
+
+<!-- <p>Server Name:{{serverName}}</p> -->
+<app-server></app-server>
+<app-server></app-server>
+<hr>
+  
+<h3>Assignment 2:</h3>
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>Username: {{username}}</p>
+
+<button class="btn btn-primary" (click)="resetInput()" [disabled]="!(username.length>0)"> Reset</button>
+<hr>
+<h3>Assignment 3:</h3>
+
+
+<button class="btn btn-primary" (click)="onDisplayDetails()"> Display Details</button>
+<p *ngIf="displayDetails">Secret Password = tuna</p>
+
+<hr>
+
+  <div *ngFor="let item of logList; let i=index" [ngStyle]="{backgroundColor: i>4? '#0d6efd': 'transparent'}" [ngClass]="{'white-text':i>4 }">{{item}}</div>
+
