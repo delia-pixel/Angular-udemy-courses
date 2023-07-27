@@ -5,6 +5,8 @@
         <ul class="list-group">
             <a href="#" class="list-group-item" style="cursor: pointer;" appHighlight [defautColor]="'black'" hoverColor='green' *ngFor="let ingredient of ingredients">
                 {{ingredient.name}} ({{ingredient.amount}})
+            <p *appUnless="ingredient.amount<=10">This is rendered by my custom structural directive</p>
+
             </a>
         </ul>
         
