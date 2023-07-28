@@ -9,7 +9,8 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailComponent {
   @Input('recipeDetail') recipeDetail: Recipe;
   
+  toggle = false;
   constructor() { }
   
-  
+
 }

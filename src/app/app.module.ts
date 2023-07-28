@@ -17,6 +17,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { FirstDirective } from './directives/first.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { DropdownDirective } from './directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UnlessDirective } from './directives/unless.directive';
     ShoppingEditComponent, 
     FirstDirective,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
